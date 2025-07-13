@@ -1,1 +1,10 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+$gris-claro: #929292;
+
+.contenedor__principal {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid $gris-claro;
+  padding: 20px;
+}
