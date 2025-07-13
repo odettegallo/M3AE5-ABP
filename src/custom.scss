@@ -14,3 +14,13 @@ $gris-claro: #d3d3d3;
   border: 1px solid $gris-claro;
   padding: 20px;
 }
+
+$footer-bg: #851759;
+$footer-text: #333;
+
+.footer {
+  background-color: $footer-bg;
+  color: $footer-text;
+  @include padding(20px);
+  text-align: center;
+}

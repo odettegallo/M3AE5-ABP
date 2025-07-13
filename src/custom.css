@@ -12038,4 +12038,11 @@ textarea.form-control-lg {
   padding: 20px;
 }
 
+.footer {
+  background-color: #851759;
+  color: #333;
+  padding: 1.25rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=custom.css.map */
