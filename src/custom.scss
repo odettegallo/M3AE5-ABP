@@ -1,13 +1,12 @@
-@use "../node_modules/bootstrap/scss/bootstrap";
-@use "../node_modules/bootstrap/scss/functions";
-@use "../node_modules/bootstrap/scss/variables";
-@use "../node_modules/bootstrap/scss/variables-dark";
-@use "../node_modules/bootstrap/scss/maps";
-@use "../node_modules/bootstrap/scss/mixins";
-@use "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
 
 $gris-claro: #d3d3d3;
-$gris-oscuro: #696969;
 
 .contenedor__principal {
   width: 80%;
