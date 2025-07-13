@@ -10,7 +10,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Minimalist</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,11 +20,11 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Catalog</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Tendencias
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -33,9 +33,9 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
+        </li> -->
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -46,9 +46,170 @@
 </nav>
     </header>
 
-    <div class="container-fluid contenedor__principal">
-  ...
+<div class="container-fluid contenedor__principal">
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.freepik.com/psd-gratis/plantilla-publicacion-nueva-llegada-psd-moda-compras_53876-129197.jpg" class="d-block w-100 carousel-img" alt="New Arrivals Collection">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                        <h5 class="carousel-title">New Arrivals</h5>
+                        <p class="carousel-text">Discover our latest collection.</p>
+                        <a href="#" class="btn btn-dark carousel-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ruta/imagen-carrusel-2.jpg" class="d-block w-100 carousel-img" alt="Summer Fashion">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                        <h5 class="carousel-title">Summer Vibes</h5>
+                        <p class="carousel-text">Light fabrics, fresh styles.</p>
+                        <a href="#" class="btn btn-dark carousel-btn">Explore Summer</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ruta/imagen-carrusel-3.jpg" class="d-block w-100 carousel-img" alt="Sustainable Choices">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                        <h5 class="carousel-title">Conscious Collection</h5>
+                        <p class="carousel-text">Fashion for a better future.</p>
+                        <a href="#" class="btn btn-dark carousel-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <h2 class="text-center mb-4 products-section-title">Our Products</h2>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 product-grid">
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.pinimg.com/736x/a7/3c/36/a73c36ebdceb90c0b2bb01ca6e2e6f52.jpg" class="card-img-top product-card-img" alt="Product Name 1">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Basic T-Shirt</h5>
+                        <p class="card-text product-card-price">$19.99</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://media.very.co.uk/i/very/W4M7S_SQ1_0000000020_BLUE_MDf?fmt=auto" class="card-img-top product-card-img" alt="Product Name 2">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">High-Waist Jeans</h5>
+                        <p class="card-text product-card-price">$49.99</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.pinimg.com/736x/20/52/82/205282128425de2b8336ef99646055c6.jpg" class="card-img-top product-card-img" alt="Product Name 3">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Oversized Hoodie</h5>
+                        <p class="card-text product-card-price">$35.00</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-4.jpg" class="card-img-top product-card-img" alt="Product Name 4">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Casual Sneakers</h5>
+                        <p class="card-text product-card-price">$60.50</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-5.jpg" class="card-img-top product-card-img" alt="Product Name 5">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Denim Jacket</h5>
+                        <p class="card-text product-card-price">$75.00</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-6.jpg" class="card-img-top product-card-img" alt="Product Name 6">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Striped Sweater</h5>
+                        <p class="card-text product-card-price">$45.00</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-7.jpg" class="card-img-top product-card-img" alt="Product Name 7">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Pleated Skirt</h5>
+                        <p class="card-text product-card-price">$30.00</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-8.jpg" class="card-img-top product-card-img" alt="Product Name 8">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Leather Belt</h5>
+                        <p class="card-text product-card-price">$25.00</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-9.jpg" class="card-img-top product-card-img" alt="Product Name 9">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Summer Dress</h5>
+                        <p class="card-text product-card-price">$55.00</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-10.jpg" class="card-img-top product-card-img" alt="Product Name 10">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Hooded Parka</h5>
+                        <p class="card-text product-card-price">$90.00</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-11.jpg" class="card-img-top product-card-img" alt="Product Name 11">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Basic White Shirt</h5>
+                        <p class="card-text product-card-price">$28.00</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="ruta/imagen-producto-12.jpg" class="card-img-top product-card-img" alt="Product Name 12">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Sporty Leggings</h5>
+                        <p class="card-text product-card-price">$39.50</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<footer class="footer bg-light text-center p-3 mt-4">
+  <p class="mb-0">© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+</footer>
+
     
 </body>
 </html>
