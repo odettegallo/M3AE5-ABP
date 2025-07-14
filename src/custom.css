@@ -12221,9 +12221,7 @@ textarea.form-control-lg {
   background-size: 100% 100%;
 }
 .carousel .carousel-caption-custom {
-  right: auto;
-  left: 5%;
-  text-align: left;
+  text-align: inherit;
   bottom: 15%;
   color: #FFFFFF;
   max-width: 50%;

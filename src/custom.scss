@@ -232,9 +232,9 @@ $gris-claro: #d3d3d3;
     }
 
     .carousel-caption-custom {
-        right: auto;
-        left: 5%;
-        text-align: left;
+        // center: auto;
+        // left: 5%;
+        text-align: inherit;
         bottom: 15%; // Posiciona el texto más arriba
         color: #FFFFFF; // Color blanco para el texto
         max-width: 50%; // Limita el ancho del texto
