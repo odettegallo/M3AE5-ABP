@@ -1,0 +1,408 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// --- Estilos de la Navbar Minimalista (Estilo H&M) ---
+.navbar {
+    background-color: #FFFFFF !important; /* Fondo blanco para la navbar */
+    border-bottom: 1px solid #E5E5E5; /* Borde inferior sutil para separación */
+    padding: 1rem 1.5rem; /* Relleno global para la navbar */
+    box-shadow: none; /* Elimina cualquier sombra predeterminada */
+    position: sticky; /* O fixed si quieres que siempre esté visible en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1020; /* Asegura que esté por encima de otros elementos */
+}
+
+.navbar-brand {
+    font-family: 'Helvetica Neue', sans-serif; /* Fuente limpia y moderna */
+    font-weight: 700; /* Negrita para el logo/nombre de la marca */
+    font-size: 1.5rem; /* Tamaño de fuente para la marca */
+    color: #1A1A1A !important; /* Color negro fuerte para el texto de la marca */
+    text-transform: uppercase; /* Mayúsculas para un look de tienda */
+    letter-spacing: 1px; /* Espaciado entre letras para la marca */
+    padding: 0; /* Elimina padding extra si lo tiene */
+    &:hover {
+        color: #000000 !important; /* Asegura que el hover también sea negro */
+    }
+}
+
+.navbar-toggler {
+    border: 1px solid #CCCCCC; /* Borde gris para el botón de alternancia */
+    padding: 0.5rem;
+    &:focus {
+        box-shadow: none; /* Elimina el anillo de enfoque azul de Bootstrap */
+        border-color: #AAAAAA;
+    }
+    .navbar-toggler-icon {
+        // Puedes cambiar el color del icono de hamburguesa aquí.
+        // Si el ícono es un SVG, podrías necesitar sobrescribir su `fill` directamente,
+        // o si es una imagen, su `filter`. Bootstrap usa un SVG con `background-image`.
+        // La mejor forma es sobrescribir la variable de Bootstrap si es posible:
+        // $navbar-dark-toggler-icon-bg o $navbar-light-toggler-icon-bg
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        margin: 0 0.5rem; /* Espaciado horizontal entre los elementos del menú */
+    }
+
+    .nav-link {
+        font-family: 'Inter', sans-serif; /* Una fuente simple para los enlaces */
+        font-weight: 500; /* Un poco de negrita para que destaquen */
+        color: #333333 !important; /* Color de texto para los enlaces */
+        padding: 0.5rem 0.8rem; /* Relleno alrededor de los enlaces */
+        text-transform: uppercase; /* Mayúsculas para el menú */
+        letter-spacing: 0.5px;
+        transition: color 0.2s ease-in-out; /* Transición suave al pasar el ratón */
+
+        &:hover,
+        &.active {
+            color: #000000 !important; /* Negro más intenso al pasar el ratón o si está activo */
+            // border-bottom: 2px solid #000000; /* Opcional: subrayado al pasar el ratón/activo */
+        }
+
+        &.disabled {
+            color: #CCCCCC !important; /* Gris claro para enlaces deshabilitados */
+            cursor: not-allowed;
+        }
+    }
+}
+
+// Estilos para el menú desplegable (Dropdown)
+.dropdown-menu {
+    border: 1px solid #E5E5E5;
+    border-radius: 0; /* Esquinas cuadradas para un look más moderno */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Sombra sutil */
+    padding: 0.5rem 0; /* Espaciado interno */
+
+    .dropdown-item {
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        padding: 0.75rem 1.5rem; /* Espaciado dentro de cada ítem del dropdown */
+        &:hover,
+        &:focus {
+            background-color: #F8F8F8; /* Fondo gris muy claro al pasar el ratón */
+            color: #1A1A1A;
+        }
+    }
+
+    .dropdown-divider {
+        border-top-color: #EEEEEE; /* Color del divisor */
+    }
+}
+
+// Estilos para el formulario de búsqueda
+.d-flex {
+    margin-left: 1.5rem; /* Espacio entre el menú y el formulario de búsqueda */
+
+    .form-control {
+        border: 1px solid #DDDDDD; /* Borde del campo de búsqueda */
+        border-radius: 4px; /* Bordes ligeramente redondeados */
+        padding: 0.6rem 1rem;
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        &::placeholder {
+            color: #999999;
+        }
+        &:focus {
+            border-color: #AAAAAA;
+            box-shadow: none; /* Elimina la sombra de enfoque azul de Bootstrap */
+        }
+    }
+
+    .btn-outline-success {
+        border: 1px solid #000000; /* Borde negro para el botón de búsqueda */
+        color: #000000; /* Texto negro */
+        background-color: transparent;
+        padding: 0.6rem 1.2rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #000000; /* Fondo negro al pasar el ratón */
+            color: #FFFFFF; /* Texto blanco al pasar el ratón */
+        }
+    }
+}
+
+// Media Queries para responsividad (Bootstrap ya hace mucho, pero ajustamos detalles)
+@media (max-width: 991.98px) { // Punto de quiebre para colapsar la navbar (lg)
+    .navbar-collapse {
+        background-color: #FFFFFF; /* Fondo blanco para el menú colapsado */
+        border-top: 1px solid #E5E5E5; /* Borde superior */
+        padding: 1rem;
+        margin-top: 1rem; /* Espacio entre el toggler y el menú colapsado */
+    }
+
+    .navbar-nav {
+        width: 100%;
+        .nav-item {
+            margin: 0;
+            border-bottom: 1px solid #F0F0F0; /* Separador para ítems en móvil */
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .nav-link {
+            padding: 1rem 0; /* Mayor padding vertical en móvil */
+            text-align: center; /* Centra los enlaces en móvil */
+        }
+    }
+
+    .d-flex {
+        width: 100%; /* El formulario de búsqueda ocupa todo el ancho */
+        margin-left: 0;
+        margin-top: 1rem; /* Espacio entre el menú y la búsqueda */
+        flex-direction: column; /* Apila el input y el botón en móvil */
+
+        .form-control {
+            width: 100%;
+            margin-right: 0 !important; /* Elimina margen derecho del input */
+            margin-bottom: 0.5rem; /* Espacio entre input y botón */
+        }
+        .btn-outline-success {
+            width: 100%; /* Botón al 100% de ancho */
+        }
+    }
+}
+
+$gris-claro: #d3d3d3;
+
+.contenedor__principal {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid $gris-claro;
+  padding: 20px;
+}
+
+// --- Estilos para el Carrusel ---
+
+.carousel {
+    .carousel-inner {
+        border-radius: 0; // Bordes cuadrados para un look más moderno
+        overflow: hidden; // Asegura que las esquinas no se salgan
+    }
+
+    .carousel-img {
+        // Ajusta la altura de las imágenes del carrusel para que no sean demasiado grandes
+        max-height: 500px; // Altura máxima en escritorio
+        object-fit: contain; // Asegura que la imagen cubra el área sin distorsionarse
+        filter: brightness(0.8); // Oscurece ligeramente la imagen para que el texto destaque
+    }
+
+    .carousel-indicators {
+        // Coloca los indicadores en la parte inferior, con un color sutil
+        button {
+            background-color: rgba(0, 0, 0, 0.4); // Negro semitransparente
+            border-radius: 50%; // Hace los indicadores circulares
+            width: 10px;
+            height: 10px;
+            margin: 0 5px; // Espacio entre indicadores
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+            &.active {
+                background-color: #000000; // Indicador activo negro sólido
+                opacity: 1;
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%; // Reduce el ancho de los controles para que no sean tan intrusivos
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        &:hover {
+            opacity: 1;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); // Iconos negros
+            background-size: 100% 100%;
+        }
+        .carousel-control-next-icon {
+              transform: rotate(180deg);
+        }
+    }
+
+    .carousel-caption-custom {
+        // center: auto;
+        // left: 5%;
+        text-align: inherit;
+        bottom: 15%; // Posiciona el texto más arriba
+        color: #FFFFFF; // Color blanco para el texto
+        max-width: 50%; // Limita el ancho del texto
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.2); // Fondo semitransparente para el texto
+        border-radius: 8px;
+
+        .carousel-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 3rem; // Título grande
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); // Sombra para que destaque
+            margin-bottom: 10px;
+        }
+
+        .carousel-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .carousel-btn {
+            background-color: #000000; // Botón negro sólido
+            border-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: #333333; // Color más oscuro al pasar el ratón
+                border-color: #333333;
+                transform: translateY(-2px); // Efecto sutil al pasar el ratón
+            }
+        }
+    }
+}
+
+// Media Queries para el carrusel en móviles
+@media (max-width: 767.98px) {
+    .carousel-img {
+        max-height: 300px; // Altura más pequeña en móviles
+    }
+    .carousel-caption-custom {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5%;
+        max-width: 90%;
+        text-align: center;
+        .carousel-title {
+            font-size: 2rem;
+        }
+        .carousel-text {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .carousel-btn {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+
+// --- Estilos para las Cards de Productos ---
+
+.products-section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1A1A1A; // Título negro fuerte
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-grid {
+    margin-bottom: 60px; // Espacio debajo de la cuadrícula de productos
+}
+
+.card.product-card {
+    border: none; // Elimina el borde predeterminado de la card
+    border-radius: 0; // Bordes cuadrados
+    box-shadow: none; // Elimina cualquier sombra
+    background-color: #FFFFFF; // Fondo blanco
+    transition: transform 0.2s ease-in-out; // Transición para efecto hover
+
+    &:hover {
+        transform: translateY(-5px); // Pequeño efecto de elevación al pasar el ratón
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); // Sombra sutil al elevarse
+    }
+
+    .product-card-img {
+        width: 100%;
+        height: 250px; // Altura fija para las imágenes del producto
+        object-fit: contain; // Corta la imagen si es necesario para llenar el espacio
+        border-radius: 0; // Asegura que la imagen también tenga bordes cuadrados
+    }
+
+    .product-card-body {
+        padding: 1rem; // Espaciado interno del cuerpo de la card
+        text-align: center; // Centra el texto en la card
+    }
+
+    .product-card-title {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1A1A1A; // Nombre del producto en negro
+        margin-bottom: 0.5rem;
+        text-transform: uppercase; // Estilo H&M para nombres de productos
+    }
+
+    .product-card-price {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #555555; // Precio en gris medio
+        margin-bottom: 1rem;
+    }
+
+    .product-card-btn {
+        background-color: #000000;
+        border-color: #000000;
+        color: #FFFFFF;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: #333333;
+            border-color: #333333;
+        }
+    }
+}
+
+// Media Queries para ajustar la altura de la imagen en móviles
+@media (max-width: 575.98px) { // Extra small devices (col-1)
+    .product-card-img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { // Small devices (col-2)
+    .product-card-img {
+        height: 220px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { // Medium devices (col-3)
+    .product-card-img {
+        height: 240px;
+    }
+}
+
+$footer-bg: #851759;
+$footer-text: #333;
+
+.footer {
+  background-color: $footer-bg;
+  color: $footer-text;
+  @include padding(20px);
+  text-align: center;
+}
