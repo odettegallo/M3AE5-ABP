@@ -1,4 +1,162 @@
 @charset "UTF-8";
+.navbar {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 1rem 1.5rem;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1020;
+}
+
+.navbar-brand {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  color: #1A1A1A;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0;
+}
+.navbar-brand:hover {
+  color: #000000 !important;
+}
+
+.navbar-toggler {
+  border: 1px solid #CCCCCC;
+  padding: 0.5rem;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  border-color: #999999;
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav .nav-item {
+  margin: 0 0.5rem;
+}
+.navbar-nav .nav-link {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #333333;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease-in-out;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #000000 !important;
+}
+.navbar-nav .nav-link.disabled {
+  color: #CCCCCC !important;
+  cursor: not-allowed;
+}
+
+.dropdown-menu {
+  border: 1px solid #E5E5E5;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+}
+.dropdown-menu .dropdown-item {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #333333;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+  background-color: #F8F8F8;
+  color: #1A1A1A;
+}
+.dropdown-menu .dropdown-divider {
+  border-top-color: #EEEEEE;
+}
+
+.d-flex {
+  margin-left: 1.5rem;
+}
+.d-flex .form-control {
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #333333;
+  font-size: 1rem;
+}
+.d-flex .form-control::placeholder {
+  color: #999999;
+}
+.d-flex .form-control:focus {
+  border-color: #999999;
+  box-shadow: none;
+}
+.d-flex .btn-outline-success {
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: transparent;
+  padding: 0.6rem 1.2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #000000;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.d-flex .btn-outline-success:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #FFFFFF;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #FFFFFF;
+    border-top: 1px solid #E5E5E5;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .navbar-nav {
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    margin: 0;
+    border-bottom: 1px solid rgb(241.75, 241.75, 241.75);
+  }
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+  .navbar-nav .nav-link {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .d-flex {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+  .d-flex .form-control {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+  }
+  .d-flex .btn-outline-success {
+    width: 100%;
+  }
+}
+.contenedor__principal {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid #d3d3d3;
+  padding: 20px;
+}
+
 /*!
  * Bootstrap  v5.3.7 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors

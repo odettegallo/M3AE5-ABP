@@ -1,5 +1,7 @@
 @use "../src/abstracts/variables";
 @use "../src/abstracts/mixins";   
+@use "../src/layout/nav";
+@use "../src/layout/main";   
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";

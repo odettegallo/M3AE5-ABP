@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 $gris-claro: #d3d3d3; // Esta variable no fue refactorizada ya que solo se usa una vez.
 
 .contenedor__principal {
