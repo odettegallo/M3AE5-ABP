@@ -157,6 +157,13 @@
   padding: 20px;
 }
 
+.footer {
+  background-color: #851759;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
 .carousel .carousel-inner {
   border-radius: 0;
   overflow: hidden;
@@ -262,6 +269,89 @@
     font-size: 0.9rem;
   }
 }
+.products-section-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: #1A1A1A;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-grid {
+  margin-bottom: 60px;
+}
+
+.card.product-card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #FFFFFF;
+  transition: transform 0.2s ease-in-out;
+}
+.card.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.card.product-card .product-card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 0;
+}
+@media (max-width: 575.98px) {
+  .card.product-card .product-card-img {
+    height: 200px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card.product-card .product-card-img {
+    height: 220px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card.product-card .product-card-img {
+    height: 240px;
+  }
+}
+.card.product-card .product-card-body {
+  padding: 1rem;
+  text-align: center;
+}
+.card.product-card .product-card-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #1A1A1A;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.card.product-card .product-card-price {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #555555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.card.product-card .product-card-btn {
+  background-color: #000000;
+  border-color: #000000;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.card.product-card .product-card-btn:hover {
+  background-color: #333333;
+  border-color: #333333;
+  color: #FFFFFF;
+}
+
 /*!
  * Bootstrap  v5.3.7 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors

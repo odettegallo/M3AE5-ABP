@@ -2,7 +2,9 @@
 @use "../src/abstracts/mixins";   
 @use "../src/layout/nav";
 @use "../src/layout/main"; 
+@use "../src/layout/footer"; 
 @use "../src/components/carrousel";  
+@use "../src/components/cards";  
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";

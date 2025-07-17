@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+// --- Estilos para las Cards de Productos ---
+
+.products-section-title {
+    @include text-style($font-family-tertiary, $font-weight-bold, $color-text-dark, $font-size-xxl);
+    margin-bottom: $spacing-xl;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-grid {
+    margin-bottom: $spacing-xxl;
+}
+
+.card.product-card {
+    border: none;
+    border-radius: $border-radius-none;
+    box-shadow: none;
+    background-color: $color-white;
+    transition: $transition-transform-ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $box-shadow-hover;
+    }
+
+    .product-card-img {
+        width: 100%;
+        @include product-card-image-height(200px, 220px, 240px, 250px);
+    }
+
+    .product-card-body {
+        padding: $spacing-sm;
+        text-align: center;
+    }
+
+    .product-card-title {
+        @include text-style($font-family-primary, $font-weight-semibold, $color-text-dark, $font-size-md);
+        margin-bottom: $spacing-xxs;
+        text-transform: uppercase;
+    }
+
+    .product-card-price {
+        @include text-style($font-family-primary, $font-weight-regular, $color-text-light, $font-size-base);
+        margin-bottom: $spacing-sm;
+    }
+
+    .product-card-btn {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        color: $color-white;
+        @include text-style($font-family-primary, $font-weight-semibold, $color-white);
+        padding: $spacing-xxs $spacing-sm;
+        text-transform: uppercase;
+        transition: $transition-ease;
+
+        &:hover {
+            @include button-hover($color-secondary, $color-white);
+        }
+    }
+}
