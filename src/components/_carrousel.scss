@@ -1,30 +1,36 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 // --- Estilos para el Carrusel ---
 
 .carousel {
     .carousel-inner {
-        border-radius: 0; // Bordes cuadrados para un look más moderno
-        overflow: hidden; // Asegura que las esquinas no se salgan
+        border-radius: $border-radius-none;
+        overflow: hidden;
     }
 
     .carousel-img {
-        // Ajusta la altura de las imágenes del carrusel para que no sean demasiado grandes
-        max-height: 500px; // Altura máxima en escritorio
-        object-fit: contain; // Asegura que la imagen cubra el área sin distorsionarse
-        filter: brightness(0.8); // Oscurece ligeramente la imagen para que el texto destaque
+        max-height: 500px;
+        object-fit: contain;
+        filter: brightness(0.8);
+
+        @media (max-width: 767.98px) {
+            max-height: 300px;
+        }
     }
 
     .carousel-indicators {
-        // Coloca los indicadores en la parte inferior, con un color sutil
         button {
-            background-color: rgba(0, 0, 0, 0.4); // Negro semitransparente
-            border-radius: 50%; // Hace los indicadores circulares
+            background-color: rgba($color-primary, 0.4);
+            border-radius: 50%;
             width: 10px;
             height: 10px;
-            margin: 0 5px; // Espacio entre indicadores
+            margin: 0 5px;
             opacity: 0.6;
-            transition: opacity 0.3s ease;
+            transition: $transition-opacity-ease;
+
             &.active {
-                background-color: #000000; // Indicador activo negro sólido
+                background-color: $color-primary;
                 opacity: 1;
             }
         }
@@ -32,89 +38,80 @@
 
     .carousel-control-prev,
     .carousel-control-next {
-        width: 5%; // Reduce el ancho de los controles para que no sean tan intrusivos
+        width: 5%;
         opacity: 0.8;
-        transition: opacity 0.3s ease;
+        transition: $transition-opacity-ease;
+
         &:hover {
             opacity: 1;
         }
+
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); // Iconos negros
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
             background-size: 100% 100%;
         }
+
         .carousel-control-next-icon {
-              transform: rotate(180deg);
+            transform: rotate(180deg);
         }
     }
 
     .carousel-caption-custom {
-        // center: auto;
-        // left: 5%;
         text-align: inherit;
-        bottom: 15%; // Posiciona el texto más arriba
-        color: #FFFFFF; // Color blanco para el texto
-        max-width: 50%; // Limita el ancho del texto
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.2); // Fondo semitransparente para el texto
-        border-radius: 8px;
+        bottom: 15%;
+        color: $color-white;
+        max-width: 50%;
+        @include padding($spacing-lg);
+        background-color: rgba($color-primary, 0.2);
+        border-radius: $border-radius-md;
 
         .carousel-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 3rem; // Título grande
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); // Sombra para que destaque
+            @include text-style($font-family-tertiary, $font-weight-bold, $color-white, $font-size-hero);
+            text-shadow: $text-shadow-strong;
             margin-bottom: 10px;
         }
 
         .carousel-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.2rem;
+            @include text-style($font-family-primary, $font-weight-regular, $color-white, $font-size-lg);
             line-height: 1.5;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            margin-bottom: $spacing-lg;
+            text-shadow: $text-shadow-light;
         }
 
         .carousel-btn {
-            background-color: #000000; // Botón negro sólido
-            border-color: #000000;
-            color: #FFFFFF;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
+            background-color: $color-primary;
+            border-color: $color-primary;
+            color: $color-white;
+            @include text-style($font-family-primary, $font-weight-semibold, $color-white);
             padding: 10px 25px;
             text-transform: uppercase;
-            transition: all 0.3s ease;
+            transition: $transition-ease;
+
             &:hover {
-                background-color: #333333; // Color más oscuro al pasar el ratón
-                border-color: #333333;
-                transform: translateY(-2px); // Efecto sutil al pasar el ratón
+                @include button-hover($color-secondary, $color-white);
+                transform: translateY(-2px);
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 5%;
+            max-width: 90%;
+            text-align: center;
+
+            .carousel-title {
+                font-size: $font-size-xxl;
+            }
+            .carousel-text {
+                font-size: $font-size-sm;
+                margin-bottom: 15px;
+            }
+            .carousel-btn {
+                padding: 8px 20px;
+                font-size: $font-size-sm;
             }
         }
     }
 }
-
-// Media Queries para el carrusel en móviles
-@media (max-width: 767.98px) {
-    .carousel-img {
-        max-height: 300px; // Altura más pequeña en móviles
-    }
-    .carousel-caption-custom {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 5%;
-        max-width: 90%;
-        text-align: center;
-        .carousel-title {
-            font-size: 2rem;
-        }
-        .carousel-text {
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-        .carousel-btn {
-            padding: 8px 20px;
-            font-size: 0.9rem;
-        }
-    }
-}
-

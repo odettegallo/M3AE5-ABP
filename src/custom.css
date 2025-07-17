@@ -173,6 +173,11 @@
   object-fit: contain;
   filter: brightness(0.8);
 }
+@media (max-width: 767.98px) {
+  .carousel .carousel-img {
+    max-height: 300px;
+  }
+}
 .carousel .carousel-indicators button {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
@@ -218,13 +223,16 @@
 }
 .carousel .carousel-caption-custom .carousel-title {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 3rem;
   font-weight: 700;
+  color: #FFFFFF;
+  font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
 }
 .carousel .carousel-caption-custom .carousel-text {
   font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -236,6 +244,8 @@
   color: #FFFFFF;
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  color: #FFFFFF;
+  font-size: 1rem;
   padding: 10px 25px;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -243,32 +253,30 @@
 .carousel .carousel-caption-custom .carousel-btn:hover {
   background-color: #333333;
   border-color: #333333;
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
-
 @media (max-width: 767.98px) {
-  .carousel-img {
-    max-height: 300px;
-  }
-  .carousel-caption-custom {
+  .carousel .carousel-caption-custom {
     left: 50%;
     transform: translateX(-50%);
     bottom: 5%;
     max-width: 90%;
     text-align: center;
   }
-  .carousel-caption-custom .carousel-title {
-    font-size: 2rem;
+  .carousel .carousel-caption-custom .carousel-title {
+    font-size: 2.2rem;
   }
-  .carousel-caption-custom .carousel-text {
-    font-size: 1rem;
+  .carousel .carousel-caption-custom .carousel-text {
+    font-size: 0.9rem;
     margin-bottom: 15px;
   }
-  .carousel-caption-custom .carousel-btn {
+  .carousel .carousel-caption-custom .carousel-btn {
     padding: 8px 20px;
     font-size: 0.9rem;
   }
 }
+
 .products-section-title {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
