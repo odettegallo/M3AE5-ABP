@@ -1,0 +1,147 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// --- Componentes ---
+
+.navbar {
+    background-color: $color-white !important;
+    border-bottom: 1px solid $color-light-grey;
+    padding: $spacing-sm $spacing-md;
+    box-shadow: none;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1020;
+}
+
+.navbar-brand {
+    @include text-style($font-family-secondary, $font-weight-bold, $color-text-dark, $font-size-xl);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0;
+
+    &:hover {
+        @include active-hover-text($color-primary);
+    }
+}
+
+.navbar-toggler {
+    border: 1px solid $color-medium-grey;
+    padding: $spacing-xxs;
+
+    &:focus {
+        box-shadow: none;
+        border-color: $color-dark-grey;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        margin: 0 $spacing-xxs;
+    }
+
+    .nav-link {
+        @include navbar-link-style;
+    }
+}
+
+.dropdown-menu {
+    border: 1px solid $color-light-grey;
+    border-radius: $border-radius-none;
+    box-shadow: $box-shadow-subtle;
+    padding: $spacing-xxs 0;
+
+    .dropdown-item {
+        @include text-style($font-family-primary, $font-weight-regular, $color-secondary);
+        padding: 0.75rem $spacing-md;
+
+        &:hover,
+        &:focus {
+            background-color: $color-background-light;
+            color: $color-text-dark;
+        }
+    }
+
+    .dropdown-divider {
+        border-top-color: $color-divider;
+    }
+}
+
+.d-flex {
+    margin-left: $spacing-md;
+
+    .form-control {
+        border: 1px solid $color-border-light;
+        border-radius: $border-radius-sm;
+        padding: 0.6rem $spacing-sm;
+        @include text-style($font-family-primary, $font-weight-regular, $color-secondary);
+
+        &::placeholder {
+            color: $color-dark-grey;
+        }
+
+        &:focus {
+            border-color: $color-dark-grey;
+            box-shadow: none;
+        }
+    }
+
+    .btn-outline-success {
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        background-color: transparent;
+        padding: 0.6rem 1.2rem;
+        @include text-style($font-family-primary, $font-weight-semibold, $color-primary);
+        text-transform: uppercase;
+        transition: $transition-ease;
+
+        &:hover {
+            @include button-hover($color-primary, $color-white);
+        }
+    }
+}
+
+// Media Queries para responsividad (Bootstrap ya hace mucho, pero ajustamos detalles)
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: $color-white;
+        border-top: 1px solid $color-light-grey;
+        padding: $spacing-sm;
+        margin-top: $spacing-sm;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        .nav-item {
+            margin: 0;
+            border-bottom: 1px solid lighten($color-light-grey, 5%);
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .nav-link {
+            padding: $spacing-sm 0;
+            text-align: center;
+        }
+    }
+
+    .d-flex {
+        width: 100%;
+        margin-left: 0;
+        margin-top: $spacing-sm;
+        flex-direction: column;
+
+        .form-control {
+            width: 100%;
+            margin-right: 0 !important;
+            margin-bottom: $spacing-xxs;
+        }
+        .btn-outline-success {
+            width: 100%;
+        }
+    }
+}

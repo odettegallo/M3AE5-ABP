@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/custom.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"> async</script>
+    <title>Minimalist</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Minimalist</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Catalog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tendencias
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    </header>
+
+<div class="container-fluid contenedor__principal">
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.freepik.com/psd-gratis/plantilla-publicacion-nueva-llegada-psd-moda-compras_53876-129197.jpg" class="d-block w-100 carousel-img" alt="New Arrivals Collection">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                        <h5 class="carousel-title">Recién llegados</h5>
+                        <p class="carousel-text">Descubre nuestra nueva colección.</p>
+                        <a href="#" class="btn btn-dark carousel-btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/summer-fashion-sale-design-template-42e15c87db5cb00709c2180610148590_screen.jpg?ts=1585948045" class="d-block w-100 carousel-img" alt="Summer Fashion">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                        <h5 class="carousel-title">Vibras de verano</h5>
+                        <p class="carousel-text">Telas livianas, estilos frescos.</p>
+                        <a href="#" class="btn btn-dark carousel-btn">Explora</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.OxeW7WZekm0mJOEC5E5KGQHaHa?w=1300&h=1300&rs=1&pid=ImgDetMain&o=7&rm=3" class="d-block w-100 carousel-img" alt="Sustainable Choices">
+                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                        <h5 class="carousel-title">Colección consciente</h5>
+                        <p class="carousel-text">Moda para un futuro mejor.</p>
+                        <a href="#" class="btn btn-dark carousel-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <h2 class="text-center mb-4 products-section-title">Nuestros Productos</h2>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 product-grid">
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.pinimg.com/736x/a7/3c/36/a73c36ebdceb90c0b2bb01ca6e2e6f52.jpg" class="card-img-top product-card-img" alt="Product Name 1">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Basic T-Shirt</h5>
+                        <p class="card-text product-card-price">$19.990</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://media.very.co.uk/i/very/W4M7S_SQ1_0000000020_BLUE_MDf?fmt=auto" class="card-img-top product-card-img" alt="Product Name 2">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">High-Waist Jeans</h5>
+                        <p class="card-text product-card-price">$49.990</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.pinimg.com/736x/20/52/82/205282128425de2b8336ef99646055c6.jpg" class="card-img-top product-card-img" alt="Product Name 3">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Oversized Hoodie</h5>
+                        <p class="card-text product-card-price">$35.000</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://shopthemint.com/cdn/shop/products/80987.Be-Your-Best-Light-Gold-Glittery-Sneakers_1200x.jpg?v=1680098848" class="card-img-top product-card-img" alt="Product Name 4">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Casual Sneakers</h5>
+                        <p class="card-text product-card-price">$60.500</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://www.gap.com/webcontent/0054/749/034/cn54749034.jpg" class="card-img-top product-card-img" alt="Product Name 5">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Denim Jacket</h5>
+                        <p class="card-text product-card-price">$75.000</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://www.bootlegger.com/dw/image/v2/BKBQ_PRD/on/demandware.static/-/Sites-bootlegger-master/default/dwb61bbb58/images/bootlegger/women/general_apparel/8046SOLSTICE_009_1.jpg?sw=408&sh=544&sm=fit&q=88" class="card-img-top product-card-img" alt="Product Name 6">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Striped Sweater</h5>
+                        <p class="card-text product-card-price">$45.000</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.pinimg.com/originals/27/24/25/272425f42817a4833adb91bc90e0619b.jpg" class="card-img-top product-card-img" alt="Product Name 7">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Pleated Skirt</h5>
+                        <p class="card-text product-card-price">$30.000</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://hautecuir.com/cdn/shop/products/double-belt-harness-women.jpg?v=1682170102&width=1445" class="card-img-top product-card-img" alt="Product Name 8">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Leather Belt</h5>
+                        <p class="card-text product-card-price">$25.000</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://www.thewowstyle.com/wp-content/uploads/2014/10/Summer-Dresses-Fashion.jpg" class="card-img-top product-card-img" alt="Product Name 9">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Summer Dress</h5>
+                        <p class="card-text product-card-price">$55.000</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.pinimg.com/originals/26/2b/18/262b1854955429b31a6e4ff11ebdafae.jpg" class="card-img-top product-card-img" alt="Product Name 10">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Hooded Parka</h5>
+                        <p class="card-text product-card-price">$90.000</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.otto.de/i/otto/184677bf-70b9-5ac7-a5cd-40417c913651/ulla-popken-longbluse-bluse-guertel-zierbaender-a-linie-langarm.jpg?$formatz$" class="card-img-top product-card-img" alt="Product Name 11">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Basic White Shirt</h5>
+                        <p class="card-text product-card-price">$28.000</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://i.pinimg.com/736x/a7/e8/1c/a7e81c1589c9d6c4d2e5b7649478b542.jpg" class="card-img-top product-card-img" alt="Product Name 12">
+                    <div class="card-body product-card-body">
+                        <h5 class="card-title product-card-title">Sporty Leggings</h5>
+                        <p class="card-text product-card-price">$39.500</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer bg-light text-center p-3 mt-4">
+  <p class="mb-0">© 2025 Minimalist. Todos los derechos reservados.</p>
+</footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.footer {
+    background-color: $color-footer-bg;
+    color: $color-footer-text;
+    @include padding($spacing-lg);
+    text-align: center;
+}

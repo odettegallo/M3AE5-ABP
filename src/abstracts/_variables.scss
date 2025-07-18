@@ -1,0 +1,61 @@
+// --- Variables Globales ---
+
+// Colores
+$color-primary: #000000;
+$color-secondary: #333333;
+$color-text-light: #555555;
+$color-text-dark: #1A1A1A;
+$color-white: #FFFFFF;
+$color-light-grey: #E5E5E5;
+$color-medium-grey: #CCCCCC;
+$color-dark-grey: #999999;
+$color-border-light: #DDDDDD;
+$color-background-light: #F8F8F8;
+$color-disabled: #CCCCCC;
+$color-divider: #EEEEEE;
+$color-footer-bg: #851759;
+$color-footer-text: #333;
+
+// Fuentes
+$font-family-primary: 'Inter', sans-serif;
+$font-family-secondary: 'Helvetica Neue', sans-serif; // Para el navbar-brand
+$font-family-tertiary: 'Plus Jakarta Sans', sans-serif; // Para títulos grandes
+
+// Tamaños de fuente base
+$font-size-base: 1rem;
+$font-size-sm: 0.9rem;
+$font-size-md: 1.1rem;
+$font-size-lg: 1.2rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2.2rem;
+$font-size-hero: 3rem;
+
+// Pesos de fuente
+$font-weight-light: 400;
+$font-weight-regular: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Espaciado
+$spacing-xxs: 0.5rem;
+$spacing-xs: 0.8rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 20px; // Se usa en carousel-caption-custom y contenedor__principal
+$spacing-xl: 40px; // Se usa en products-section-title
+$spacing-xxl: 60px; // Se usa en product-grid
+
+// Bordes y sombras
+$border-radius-none: 0;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$box-shadow-subtle: 0 2px 5px rgba(0,0,0,0.08);
+$box-shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.08);
+$text-shadow-light: 1px 1px 2px rgba(0,0,0,0.5);
+$text-shadow-strong: 2px 2px 4px rgba(0,0,0,0.5);
+
+// Transiciones
+$transition-ease: all 0.3s ease;
+$transition-color-ease: color 0.2s ease-in-out;
+$transition-transform-ease: transform 0.2s ease-in-out;
+$transition-opacity-ease: opacity 0.3s ease;

@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+
+// --- Mixins ---
+
+/// Mixin para estilos de hover en botones o elementos interactivos
+@mixin button-hover($bg-color: $color-secondary, $text-color: $color-white) {
+    background-color: $bg-color;
+    border-color: $bg-color;
+    color: $text-color;
+}
+
+/// Mixin para estilos de texto activo o hover
+@mixin active-hover-text($color: $color-primary) {
+    color: $color !important;
+}
+
+/// Mixin para estilos de fuente base
+@mixin text-style($font-family: $font-family-primary, $font-weight: $font-weight-regular, $color: $color-text-dark, $font-size: $font-size-base) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    color: $color;
+    font-size: $font-size;
+}
+
+/// Mixin para estilos de padding con una sola propiedad para todos los lados
+@mixin padding($padding) {
+    padding: $padding;
+}
+
+/// Mixin para estilos de navbar link
+@mixin navbar-link-style {
+    @include text-style($font-family-primary, $font-weight-regular, $color-secondary, $font-size-base);
+    padding: $spacing-xxs $spacing-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: $transition-color-ease;
+
+    &:hover,
+    &.active {
+        @include active-hover-text($color-primary);
+    }
+
+    &.disabled {
+        color: $color-disabled !important;
+        cursor: not-allowed;
+    }
+}
+
+/// Mixin para la altura de las imágenes de cards, con media queries
+@mixin product-card-image-height($height-xs, $height-sm, $height-md, $height-lg) {
+    height: $height-lg;
+    object-fit: contain;
+    border-radius: $border-radius-none;
+
+    @media (max-width: 575.98px) {
+        height: $height-xs;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        height: $height-sm;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        height: $height-md;
+    }
+}
+
