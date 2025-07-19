@@ -2,3 +2,4 @@ custom copy.scss
 node_modules/
 *.json
 tachado.txt
+sass.txt
