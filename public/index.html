@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../src/custom.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"> async</script>
+        <script src="js/script.js"> async</script>
+
+
     <title>Minimalist</title>
 </head>
 <body>
@@ -35,9 +38,7 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li> -->
+        
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -101,6 +102,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Basic T-Shirt</h5>
                         <p class="card-text product-card-price">$19.990</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -110,6 +112,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">High-Waist Jeans</h5>
                         <p class="card-text product-card-price">$49.990</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -119,6 +122,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Oversized Hoodie</h5>
                         <p class="card-text product-card-price">$35.000</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -128,6 +132,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Casual Sneakers</h5>
                         <p class="card-text product-card-price">$60.500</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -138,7 +143,8 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Denim Jacket</h5>
                         <p class="card-text product-card-price">$75.000</p>
-                        </div>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>                   
+                    </div>
                 </div>
             </div>
             <div class="col">
@@ -147,6 +153,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Striped Sweater</h5>
                         <p class="card-text product-card-price">$45.000</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -156,6 +163,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Pleated Skirt</h5>
                         <p class="card-text product-card-price">$30.000</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -165,6 +173,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Leather Belt</h5>
                         <p class="card-text product-card-price">$25.000</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -175,6 +184,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Summer Dress</h5>
                         <p class="card-text product-card-price">$55.000</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -184,6 +194,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Hooded Parka</h5>
                         <p class="card-text product-card-price">$90.000</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -193,6 +204,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Basic White Shirt</h5>
                         <p class="card-text product-card-price">$28.000</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -202,6 +214,7 @@
                     <div class="card-body product-card-body">
                         <h5 class="card-title product-card-title">Sporty Leggings</h5>
                         <p class="card-text product-card-price">$39.500</p>
+                        <button class="btn btn-primary product-card-btn">Añadir al carrito</button>
                         </div>
                 </div>
             </div>
@@ -209,6 +222,54 @@
     </div>
 </div>
 </div>
+<section class="contact-form-section">
+        <div class="contact-form-container">
+            <h3 class="contact-form__title">¡Envíanos un mensaje!</h3>
+            <p class="contact-form__description">Queremos saber de ti, por favor llena el formulario a continuación.</p>
+            
+            <form id="form-contact" action="#" method="POST" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="first-name" class="form-label">Nombre</label>
+                    <!-- NOTA: Se añade la clase .form-control de Bootstrap -->
+                    <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Tu primer nombre">
+                    <!-- NOTA: Se usa la clase .invalid-feedback de Bootstrap -->
+                    <div id="errorName" class="invalid-feedback"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name" class="form-label">Apellido</label>
+                    <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Tu apellido">
+                    <div id="errorLastName" class="invalid-feedback"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="tu.email@ejemplo.com">
+                    <div id="errorEmail" class="invalid-feedback"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment" class="form-label">Comentario</label>
+                    <textarea id="comment" name="comment" class="form-control" rows="5" placeholder="Tu mensaje aquí..."></textarea>
+                    <div id="errorMessage" class="invalid-feedback"></div>
+                </div>
+
+                <button type="submit" class="submit-button">Enviar el mensaje</button>
+            </form>
+        
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Guardado exitosamente.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+
 <footer class="footer bg-light text-center p-3 mt-4">
   <p class="mb-0">© 2025 Minimalist. Todos los derechos reservados.</p>
 </footer>
