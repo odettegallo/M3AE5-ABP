@@ -1,0 +1,192 @@
+@use '../abstracts/variables' as *;
+
+/* --- Sección del Formulario de Contacto --- */
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; // Centra verticalmente el contenedor del formulario
+    min-height: 100vh; // Para que ocupe al menos la altura de la ventana
+    padding: $spacing-xl $spacing-md; // Padding adaptable
+    background-color: $color-background-light; // Un fondo claro para el minimalismo
+    box-sizing: border-box;
+}
+
+.contact-form-container {
+    background-color: $color-white; // Fondo blanco puro
+    border: 1px solid $color-border-light; // Borde muy sutil
+    border-radius: $border-radius-md; // Bordes suavemente redondeados
+    padding: $spacing-xl; // Espaciado interno generoso
+    box-shadow: $box-shadow-subtle; // Sombra muy discreta
+    max-width: 600px; // Ancho máximo definido
+    width: 100%; // Ocupa todo el ancho disponible hasta el max-width
+    box-sizing: border-box;
+    text-align: center; // Centra el texto principal
+
+    .contact-form__title {
+        color: $color-text-dark;
+        font-family: $font-family-tertiary; // Usa la fuente para títulos
+        font-size: $font-size-xxl; // Tamaño de título grande
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-sm; // Espacio inferior
+        line-height: 1.2;
+    }
+
+    .contact-form__description {
+        color: $color-text-light; // Color de texto más suave
+        font-family: $font-family-primary; // Fuente principal para descripciones
+        font-size: $font-size-base;
+        line-height: 1.6; // Mayor interlineado para legibilidad
+        margin-bottom: $spacing-xl; // Espacio generoso antes del formulario
+    }
+}
+
+/* --- Estilos del Formulario en sí --- */
+.contact-form {
+    display: flex;
+    flex-wrap: wrap; // Permite que los elementos se envuelvan
+    gap: $spacing-md; // Espacio entre los grupos de formulario
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc(50% - #{$spacing-xs}); // 2 columnas, ajustando por el gap
+        min-width: 260px; // Evita que los campos se hagan muy pequeños
+
+        &--full-width {
+            flex: 1 1 100%; // Ocupa todo el ancho disponible
+        }
+    }
+
+    .form-label {
+        display: block;
+        text-align: left;
+        margin-bottom: $spacing-xxs; // Espacio pequeño entre label y input
+        color: $color-text-dark;
+        font-family: $font-family-primary;
+        font-size: $font-size-sm; // Tamaño de fuente para labels
+        font-weight: $font-weight-regular;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        padding: $spacing-xs $spacing-sm; // Padding interno
+        border: 1px solid $color-border-light; // Borde claro
+        border-radius: $border-radius-sm; // Bordes ligeramente redondeados
+        font-family: $font-family-primary;
+        font-size: $font-size-base;
+        color: $color-text-dark;
+        background-color: $color-background-light; // Fondo muy claro para los campos
+        box-sizing: border-box; // Incluye padding y borde en el ancho total
+        transition: $transition-ease; // Transición suave para los estados
+
+        &::placeholder {
+            color: $color-dark-grey; // Color de placeholder más oscuro pero sutil
+            font-weight: $font-weight-light;
+        }
+
+        &:focus {
+            outline: none; // Quita el outline por defecto
+            border-color: $color-secondary; // Borde de color secundario al enfocar
+            box-shadow: 0 0 0 3px rgba($color-secondary, 0.2); // Sombra sutil con el color secundario
+            background-color: $color-white; // Fondo blanco al enfocar
+        }
+    }
+
+    .form-textarea {
+        resize: vertical; // Permite solo redimensionar verticalmente
+        min-height: 120px; // Altura mínima un poco más generosa
+    }
+}
+
+/* --- Estilos del Botón de Enviar --- */
+.submit-button {
+    background-color: $color-primary; // Color principal oscuro
+    color: $color-white; // Texto blanco
+    padding: $spacing-sm $spacing-lg; // Padding generoso
+    border: none;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    font-family: $font-family-primary;
+    font-size: $font-size-md; // Tamaño de fuente del botón
+    font-weight: $font-weight-semibold; // Peso de fuente
+    transition: $transition-ease; // Transición para hover y active
+    width: auto; // Ancho automático según el contenido
+    margin-top: $spacing-md; // Espacio superior
+    align-self: flex-end; // Alinea el botón a la derecha dentro del flex container
+    letter-spacing: 0.5px; // Pequeño espaciado entre letras
+
+    &:hover {
+        background-color: darken($color-primary, 10%); // Oscurece al pasar el ratón
+        transform: translateY(-2px); // Pequeño efecto de elevación
+        box-shadow: $box-shadow-hover; // Sombra al hacer hover
+    }
+
+    &:active {
+        background-color: lighten($color-primary, 10%); // Aclara un poco al hacer clic
+        transform: translateY(0);
+        box-shadow: none;
+    }
+}
+
+/* --- Media Queries para la Responsividad del Formulario --- */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: $spacing-xl $spacing-md;
+    }
+
+    .contact-form .form-group {
+        flex: 1 1 100%; // Todos los campos a una sola columna
+        min-width: unset; // Reinicia el min-width
+    }
+
+    .contact-form__title {
+        font-size: $font-size-xl; // Reduce el tamaño del título
+    }
+
+    .contact-form__description {
+        font-size: $font-size-sm; // Reduce el tamaño de la descripción
+    }
+
+    .submit-button {
+        width: 100%; // Botón al 100% de ancho en tablet
+        align-self: center; // Centra el botón
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-section {
+        padding: $spacing-md $spacing-sm;
+    }
+
+    .contact-form-container {
+        padding: $spacing-lg $spacing-md; // Menor padding en móviles
+        border-radius: $border-radius-none; // Quita el redondeado en pantallas muy pequeñas
+        box-shadow: none; // Quita la sombra en pantallas muy pequeñas
+
+        .contact-form__title {
+            font-size: $font-size-lg; // Aún más pequeño
+            margin-bottom: $spacing-xs;
+        }
+
+        .contact-form__description {
+            font-size: $font-size-sm;
+            margin-bottom: $spacing-md;
+        }
+    }
+
+    .contact-form {
+        gap: $spacing-sm; // Reduce el espacio entre campos
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: $spacing-xs; // Menor padding en campos
+        font-size: $font-size-sm;
+    }
+
+    .submit-button {
+        padding: $spacing-sm $spacing-md;
+        font-size: $font-size-base;
+    }
+}

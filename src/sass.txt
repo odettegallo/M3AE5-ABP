@@ -1,0 +1,7 @@
+abstracts/: Variables, mixins y funciones globales.  
+base/: Resets, tipografía y estilos generales.  
+components/: Botones, tarjetas, formularios reutilizables.  
+layout/: Header, footer, grid y organización del sitio.  
+pages/: Estilos únicos por página (ej. home, contacto).  
+themes/: Variantes visuales del sitio (dark mode, etc).  
+vendors/: Estilos externos como Bootstrap o jQuery UI.
