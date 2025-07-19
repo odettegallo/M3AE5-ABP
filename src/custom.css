@@ -150,9 +150,9 @@
     width: 100%;
   }
 }
-.contenedor__principal {
+.main {
   width: 80%;
-  margin: 10px auto;
+  margin: 20px auto;
   border: 1px solid #d3d3d3;
   padding: 20px;
 }

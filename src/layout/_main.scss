@@ -3,9 +3,9 @@
 
 $gris-claro: #d3d3d3; // Esta variable no fue refactorizada ya que solo se usa una vez.
 
-.contenedor__principal {
+.main {
     width: 80%;
-    margin: 10px auto;
+    margin: 20px auto;
     border: 1px solid $gris-claro;
-    @include padding($spacing-lg);
+    padding: 20px;
 }
